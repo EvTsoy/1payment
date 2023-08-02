@@ -1,0 +1,18 @@
+body {
+  background-color: lightgray;
+}
+
+.value-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.value-input input {
+  width: 400px;
+  height: 50px;
+  font-size: 30px;
+}
