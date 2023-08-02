@@ -11,13 +11,27 @@ import './styles/app.css';
 const valueIdEl = document.getElementById('value-id');
 const inputEl = document.querySelector('.user-input');
 
-inputEl.addEventListener('input', async (e) => {
+inputEl.addEventListener('input', (e) => {
   if (!e.target.value) {
     valueIdEl.innerText = 'Введите число';
     return;
   }
 
-  const response = await fetch(`check-value/${e.target.value}`);
+  callback();
+});
+
+function debounce(func, timeout = 300) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  };
+}
+
+const callback = debounce(async () => {
+  const response = await fetch(`check-value/${inputEl.value}`);
   const data = await response.json();
 
   if (data.rangeId) {
