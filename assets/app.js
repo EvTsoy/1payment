@@ -12,6 +12,11 @@ const valueIdEl = document.getElementById('value-id');
 const inputEl = document.querySelector('.user-input');
 
 inputEl.addEventListener('input', async (e) => {
+  if (!e.target.value) {
+    valueIdEl.innerText = 'Введите число';
+    return;
+  }
+
   const response = await fetch(`check-value/${e.target.value}`);
   const data = await response.json();
 

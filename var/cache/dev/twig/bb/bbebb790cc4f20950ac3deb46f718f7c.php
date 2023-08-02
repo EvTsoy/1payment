@@ -71,7 +71,7 @@ class __TwigTemplate_b9e0eaf1e1accc6ca9b1e54c20ca366d extends Template
 
         // line 6
         echo "<div class=\"value-input\">
-    <p id=\"value-id\"></p>
+    <p id=\"value-id\">Введите число</p>
     <div>
         <input type=\"number\" class=\"user-input\"/>
     </div>
@@ -105,7 +105,7 @@ class __TwigTemplate_b9e0eaf1e1accc6ca9b1e54c20ca366d extends Template
 
 {% block body %}
 <div class=\"value-input\">
-    <p id=\"value-id\"></p>
+    <p id=\"value-id\">Введите число</p>
     <div>
         <input type=\"number\" class=\"user-input\"/>
     </div>
